@@ -3,22 +3,22 @@ SELECT first_name
 FROM actor
 WHERE first_name LIKE 'A%';
 
-Q2
+# Q2
 SELECT COUNT(*)
 FROM film_category
 WHERE category_id = 3;
 
-Q3
+# Q3
 SELECT AVG(amount)
 FROM payments
 WHERE YEAR(paymentDate) = 2004;
 
-Q4
+# Q4
 SELECT productName, quantityInStock
 FROM products
 WHERE quantityInStock > (SELECT AVG(quantityInStock) FROM products);
 
-Q5
+# Q5
 SELECT CountryCode, Name, Population
 FROM City
 WHERE CountryCode = 'GBR'
