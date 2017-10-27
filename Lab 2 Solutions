@@ -23,3 +23,10 @@ SELECT CountryCode, Name, Population
 FROM City
 WHERE CountryCode = 'GBR'
 ORDER BY Population DESC;
+
+# Q6
+SELECT Region, SUM(Population) as Population, AVG(LifeExpectancy) as AverageLifeExpectancy
+FROM Country
+WHERE LifeExpectancy IS NOT NULL
+GROUP BY Region
+ORDER BY AVG(LifeExpectancy) DESC;
